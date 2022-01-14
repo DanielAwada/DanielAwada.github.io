@@ -1,12 +1,10 @@
 :root {
     /*canva.com/colors/color-meanings/lime-green/*/
-    --verde1: #A1E8A1;
-    --verde2: #57D657;
-    --verde3: #29A829;
-    --cinza1: #eee;
-    --cinza2: #aaa;
-    --cinza3: #777;
-    --cinza4: #333;
+    --verde1: #8dbb90;
+    --verde2: #74b07a;
+    --cinza1: #e2e3df;
+    --cinza2: #494d4e;
+    --cinza3: #2e3233;
 }
 
 * {
@@ -25,7 +23,7 @@ h1 {
     font-size: 2em;
     margin-bottom: 1em;
     text-align: center;
-    color: var(--verde3)
+    color: var(--verde2)
 }
 
 h2 {
@@ -52,7 +50,7 @@ mjx-container {
 
 .top {
     align-items: center;
-    background: var(--verde2);
+    background: var(--verde1);
     color: white;
     display: flex;
     height: 50px;
@@ -63,7 +61,7 @@ mjx-container {
 
 .footer {
     align-items: center;
-    background: var(--cinza4);
+    background: var(--cinza3);
     color: white;
     display: flex;
     height: 50px;
@@ -82,6 +80,7 @@ mjx-container {
 .tabs {
     border-top: 4px solid var(--cinza2);
     background: var(--cinza2);
+    color: white;
     display: flex;
     height: 50px;
     padding: 0 1em;
@@ -95,11 +94,13 @@ mjx-container {
 
     .um .tab-item:hover {
             background: white;
+            color: var(--cinza2);
         }
 
-    .dois .tab-item:hover {
-        background: var(--verde1);
-    }
+.dois .tab-item:hover {
+    background: var(--verde1);
+    color: var(--cinza3);
+}
 
 
 
