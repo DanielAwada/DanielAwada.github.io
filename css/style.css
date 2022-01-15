@@ -15,6 +15,8 @@
 
 body {
     background: var(--cinza1);
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -23,7 +25,6 @@ h1 {
     font-size: 2em;
     margin-bottom: 1em;
     text-align: center;
-    color: var(--verde2)
 }
 
 h2 {
@@ -31,8 +32,17 @@ h2 {
     padding-top: 1em;
 }
 
-h2, strong {
+h1, h2, strong {
     color: #222;
+}
+
+a{
+    color: var(--verde2);
+}
+
+nav > ul > a{
+    color: white;
+    text-decoration: none;
 }
 
 mjx-container {
@@ -40,93 +50,69 @@ mjx-container {
     color: #222 !important;
 }
 
-.wrapper {
-    color: #444;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0 auto;
-    max-width: 800px;
-    width: 100vw;
-}
-
-.top {
+header {
     align-items: center;
     background: var(--verde1);
     color: white;
     display: flex;
-    height: 50px;
+    flex-direction: column;
+    height: 200px;
     justify-content: center;
     width: 100%;
 }
-
-
-.footer {
-    align-items: center;
-    background: var(--cinza3);
-    color: white;
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    width: 100%;
-}
-
-
 
 .logo {
     font-weight: 100;
     text-align: center;
     width: 100%;
+
 }
 
-.tabs {
-    border-top: 4px solid var(--cinza2);
+.social{
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon{
+    margin: 0.5em;
+}
+
+
+aside {
     background: var(--cinza2);
+    width: 100%;
+}
+
+nav {
     color: white;
     display: flex;
-    height: 50px;
-    padding: 0 1em;
+    flex-direction: column;
 }
 
-.tab-item {
-    display: inline-flex;
-    align-items: center;
-    padding: 0 1em;
+
+.nav-item {
+    padding: 1em;
+    text-align: center;
 }
 
-    .um .tab-item:hover {
+    .nav-item:hover {
             background: white;
             color: var(--cinza2);
         }
 
-.dois .tab-item:hover {
-    background: var(--verde1);
-    color: var(--cinza3);
+
+main {
+    width: 100vw;
 }
 
-
-
-.content {
+article {
     background: white;
     line-height: 1.5;
     text-align: justify;
     width: 100%;
     padding: 0 2em 2em 2em;
-}
-
-.content.tema2{
-    background: var(--verde2);
-    color: #fff;
-    width: 100%;
-    max-width: none;
-}
-
-
-.menu {
-    padding: 2em;
-    background: var(--verde1);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: -1em;
 }
 
 .card {
@@ -138,8 +124,37 @@ mjx-container {
 
 }
 
-.big-logo {
-    font-size: 72px;
+footer {
+    align-items: center;
+    background: var(--cinza3);
+    color: white;
     display: flex;
+    height: 50px;
     justify-content: center;
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 801px) {
+    /* For mobile phones: */
+
+
+    aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 200px;
+    }
+
+    .nav-item{
+        text-align: left;
+    }
+
+    main {
+        width: calc(100vw - 200px);
+        max-width: 800px;
+        margin-left: 200px;
+    }
+
 }
