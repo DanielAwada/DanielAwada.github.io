@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Mecânica Lagrangiana
+title: Mais Conteúdos
 ---
 
 # Aqui estará a coletânia de artigos diversos.
 
-_Por enquanto não há nenhum artigo por aqui_
+_Ainda não há nada por aqui_
