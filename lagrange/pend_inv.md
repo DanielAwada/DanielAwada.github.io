@@ -1,5 +1,6 @@
 ﻿---
 layout: default
+tags: [2GDL, Conservativo]
 title: Pêndulo Inverso
 ---   
 
