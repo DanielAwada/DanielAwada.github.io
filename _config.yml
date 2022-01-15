@@ -1,3 +1,4 @@
-name: Daniel Awada
-markdown: kramdown
-include: ['_pages']
+---
+layout: default
+title: Mecânica Lagrangiana
+---
