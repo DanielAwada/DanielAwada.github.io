@@ -5,4 +5,4 @@ title: Projetos em Arduínos
 
 # Aqui estará a coletânia de projetos feitos em arduínos.
 
-_Por enquanto não há nenhum projeto aqui_
+_Ainda não há nada aqui_
