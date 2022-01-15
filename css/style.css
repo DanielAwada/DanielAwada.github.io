@@ -117,11 +117,12 @@ article {
 
 .card {
     background: white;
-    width: 200px;
-    height: 200px;
     border: 4px solid var(--verde2);
-    margin-bottom: 1em;
-
+    display: grid;
+    grid-gap: 1em;
+    height: 200px;
+    margin-bottom: 0 auto;
+    max-width: 100%;
 }
 
 footer {
@@ -157,4 +158,14 @@ footer {
         margin-left: 200px;
     }
 
+    .card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
