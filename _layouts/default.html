@@ -3,44 +3,54 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <title>{{ page.title }}</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="top">
+
+    <aside>
+        <header>
             <div class="logo">
                 <b>danielawada.github.io</b>
             </div>
-        </div>
-            <div class="tabs um">
-                <div class="tab-item">Página inicial</div>
-                <div class="tab-item">Outros artigos</div>
-                <div class="tab-item">Teoria</div>
-                <div class="tab-item">Algorítimo</div>
-                <div class="tab-item">Simular agora</div>
+
+            <div class="social">
+                <div class="icon">Gm</div>
+                <div class="icon">GH</div>
+                <div class="icon">LIn</div>
             </div>
-            <div class="content">
+        </header>
+
+        <nav>
+            <ul>
+                <a href="/alg_lin">
+                <li class="nav-item">Álgebra Linear</li></a>
+                <a href="/ML">
+                <li class="nav-item">Machine Learning</li></a>
+                <a href="/lagrange">
+                <li class="nav-item">Mecânica Lagrangiana</li></a>
+                <a href="/controle">
+                <li class="nav-item">Teoria de Controle</li></a>
+                <a href="/python">
+                <li class="nav-item">Simulações em Python</li></a>
+                <a href="/arfuino">
+                <li class="nav-item">Projetos em Arduíno</li></a>
+                <a href="/outros">
+                <li class="nav-item">Mais Conteúdo</li></a>
+            </ul>
+
+        </nav>
+    </aside>
+
+    <main>
+        <article>
 
             {{ content }}
-              
-            </div>
-            <div class="tabs dois">
-                <div class="tab-item">Mecânica Clássica</div>
-                <div class="tab-item">Gravitacional</div>
-            </div>
 
-            <div class="menu">
-                <div class="card">ITEM 1</div>
-                <div class="card">ITEM 2</div>
-                <div class="card">ITEM 3</div>
-                <div class="card">ITEM 4</div>
-                <div class="card">ITEM 5</div>
-            </div>
-
-        <div class="footer">Feito com ❤️ por Daniel Awada</div>
-    </div>
+        </article>
+        <footer>Feito com ❤️ por Daniel Awada</footer>
+    </main>
 </body>
 </html>
