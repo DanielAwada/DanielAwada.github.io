@@ -1,2 +1,3 @@
 name: Daniel Awada
 markdown: kramdown
+include: ['_pages']

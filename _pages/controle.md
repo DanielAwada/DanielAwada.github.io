@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: "/controle/"
 title: Teoria de Controle
 ---
 

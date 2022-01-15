@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: "/python/"
 title: Simulações em Python
 ---
 
