@@ -85,13 +85,6 @@ aside {
     width: 100%;
 }
 
-nav {
-    color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-
 .nav-item {
     padding: 1em;
     text-align: center;
