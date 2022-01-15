@@ -1,110 +1,150 @@
----
-layout: default
-title: Pêndulo Inverso
----   
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>layout: default
+title: Pêndulo Inverso</title>
+</head>
+<body>
 
-<h1>Pêndulo Inverso</h1>
-    <h2>CINEMÁTICA</h2>
-    M = Massa do bloco<br />
-    m = Massa do pêndulo<br />
-    L = Comprimento do pêndulo<br />
-    X = Posição horizontal do bloco<br />
-    Ẋ = Velocidade horizontal do bloco<br />
-    θ = Ângulo do pêndulo <br />
-    θ_dot = Velocidade angular do pêndulo<br />
+    <hr />
+<h2 id="layout-default-title-pendulo-inverso">layout: default
+title: Pêndulo Inverso</h2>
+<h1 id="pendulo-inverso">Pêndulo Inverso</h1>
+<h2 id="cinematica">CINEMÁTICA</h2>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+<th>Unidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\(M\)</td>
+<td>Massa do bloco</td>
+<td>kg</td>
+</tr>
+<tr>
+<td>\(m\)</td>
+<td>Massa do pêndulo</td>
+<td>kg</td>
+</tr>
+<tr>
+<td>\(L\)</td>
+<td>Comprimento do pêndulo</td>
+<td>m</td>
+</tr>
+<tr>
+<td>\(X\)</td>
+<td>Posição horizontal do bloco</td>
+<td>m</td>
+</tr>
+<tr>
+<td>\(\dot X\)</td>
+<td>Velocidade horizontal do bloco</td>
+<td>m/s</td>
+</tr>
+<tr>
+<td>\(\theta\)</td>
+<td>Ângulo do pêndulo</td>
+<td>rad</td>
+</tr>
+<tr>
+<td>\(\dot \theta\)</td>
+<td>Velocidade angular do pêndulo</td>
+<td>rad/s</td>
+</tr>
+</tbody>
+</table>
+<pre><code>\\[
+\begin{cases}
+X_m = X - L sin(\theta)\\
+Y_m =     L cos(\theta)\\
+\end{cases}
+\\]
+</code></pre>
+<p>Calculando a derivada em função do tempo:</p>
+<pre><code>\\[
+\begin{cases}
+\dot X_m = \dot X - L \dot \theta cos(\theta)\\
+\dot Y_m = - L \dot \theta sin(\theta)\\
+\end{cases}
+\\]
+</code></pre>
+<h3 id="energia-potencial-v">Energia Potencial (V):</h3>
+<pre><code>\\[
+V = m g Y_m \\
+\\]
+</code></pre>
+<p>Substituindo a segunda equação do sistema (1) na equação acima, temos que:</p>
+<pre><code>\\[
+V = m g L cos(\theta) \\
+\\]
+</code></pre>
+<h3 id="energia-cinetica-t">Energia Cinética (T):</h3>
+<pre><code>\\[
+T = \frac{1}{2} M \dot X^2 + \frac{1}{2} m (\dot X_m^2 + \dot Y_m^2) \\
+\\]
+</code></pre>
+<p>Substituindo o sistema de equações (2) na equação acima, temos que:</p>
+<pre><code>\\[
+T = \frac{1}{2} M \dot X^2 + \frac{1}{2} m \Big( \dot X^2 - 2 L \dot \theta \dot X cos(\theta) + L^2 \dot \theta^2 \big(cos(\theta)^2 + sin(\theta)^2 \big) \Big) \\
+\\]
+</code></pre>
+<p>Lembrando que \( cos(\theta)^2 + sin(\theta)^2  = 1\), a equação acima pode ser simplificada como:</p>
+<pre><code>\\[
+T = \frac{1}{2} (M + m) \dot X^2 + \frac{1}{2} m L^2 \dot \theta^2 - m L \dot \theta \dot X cos(\theta)
+\\]
+</code></pre>
+<h2 id="equacao-de-lagrange">EQUAÇÃO DE LAGRANGE</h2>
+<pre><code>\\[
+\frac{\mathrm{d}}{\mathrm{d}t} \Bigg(\frac{\partial \mathcal{L}}{\partial \dot q_i} \Bigg) - \frac{\partial \mathcal{L}}{\partial \dot q_i} = Q_i
+\\]
+\\[
+L = T - V
+\\]
+\\[
+L = \Bigg[ \frac{1}{2} (M + m) \dot X^2 + \frac{1}{2} m L^2 \dot \theta^2 - m L \dot \theta \dot X cos(\theta) \Bigg] - \Bigg[ m g L cos(\theta) \Bigg]
+\\]
+</code></pre>
+<h2 id="equacoes-de-movimento">EQUAÇÕES DE MOVIMENTO</h2>
+<h3 id="na-dimensao-x">Na dimensão X</h3>
+<p>Resolvendo o Lagrangiano em \( \dot X \) nos dará a equação de movimento nessa direção:</p>
+<pre><code>\\[
+(M + m) \dot X - (mL\ddot \theta cos(\theta) - mL\dot \theta^2 sin(\theta)) = F(t)
+\\]
+</code></pre>
+<p>Fazendo a multiplicação do sinal com o parênteses para simplificação:</p>
+<pre><code>\\[
+(M + m) \dot X - mL\ddot \theta cos(\theta) + mL\dot \theta^2 sin(\theta) = F(t)
+\\]
+</code></pre>
+<h3 id="na-dimensao">Na dimensão θ</h3>
+<p>Resolvendo o Lagrangiano em ( \dot \theta ) nos dará a equação de movimento nessa direção:</p>
+<pre><code>\\[
+m L^2 \ddot \theta^2 - m L \ddot X cos(\theta) + m L \dot X \dot \theta sin(\theta) - m L \dot X \dot \theta sin(\theta) - m g L sin(\theta) = 0
+\\]
+</code></pre>
+<p>A equação acima é igual a 0 pois não há nenhuma força de Momento externa no nosso exemplo, caso houvesse, iríamos igualar à ela.</p>
+<p>Cancelando as partes \(+ m L \dot X \dot \theta sin(\theta)\) e \(- m L \dot X \dot \theta sin(\theta)\) temos:</p>
+<pre><code>\[
+m L^2 \ddot \theta^2 - m L \ddot X cos(\theta) - m g L sin(\theta) = 0
+\]
+</code></pre>
+<p>Dividindo tudo por \(mL\):
+[
+L \ddot \theta^2 - \ddot X cos(\theta) - g sin(\theta) = 0
+]</p>
+<p>Temos então, como resultado final, as equações (n) e (m):</p>
+<pre><code>\\[
+\begin{cases}
+(M + m) \dot X - mL\ddot \theta cos(\theta) + mL\dot \theta^2 sin(\theta) = F(t) \\
+L \ddot \theta^2 - \ddot X cos(\theta) - g sin(\theta) = 0
+\end{cases}
+\\]
+</code></pre>
 
 
-    \[
-    \begin{cases}
-    X_m = X - L sin(\theta)\\
-    Y_m =     L cos(\theta)\\
-    \end{cases}
-    \]
-
-    <p>Calculando a derivada em função do tempo:</p>
-
-    \[
-    \begin{cases}
-    \dot X_m = \dot X - L \dot \theta cos(\theta)\\
-    \dot Y_m = - L \dot \theta sin(\theta)\\
-    \end{cases}
-    \]
-
-    <h3>Energia Potencial (V):</h3>
-    \[
-    V = m g Y_m \\
-    \]
-    <p>Substituindo a segunda equação do sistema (1) na equação acima, temos que:</p>
-    \[
-    V = m g L cos(\theta) \\
-    \]
-
-
-
-    <h3>Energia Cinética (T):</h3>
-    \[
-    T = \frac{1}{2} M \dot X^2 + \frac{1}{2} m (\dot X_m^2 + \dot Y_m^2) \\
-    \]
-
-    <p>Substituindo o sistema de equações (2) na equação acima, temos que:</p>
-
-    \[
-    T = \frac{1}{2} M \dot X^2 + \frac{1}{2} m \Big( \dot X^2 - 2 L \dot \theta \dot X cos(\theta) + L^2 \dot \theta^2 \big(cos(\theta)^2 + sin(\theta)^2 \big) \Big) \\
-    \]
-
-    <p>Lembrando que \( cos(\theta)^2 + sin(\theta)^2  = 1\), a equação acima pode ser simplificada como:</p>
-
-    \[
-    T = \frac{1}{2} (M + m) \dot X^2 + \frac{1}{2} m L^2 \dot \theta^2 - m L \dot \theta \dot X cos(\theta)
-    \]
-
-
-    <h2>EQUAÇÃO DE LAGRANGE</h2>
-    \[
-    \frac{\mathrm{d}}{\mathrm{d}t} \Bigg(\frac{\partial \mathcal{L}}{\partial \dot q_i} \Bigg) - \frac{\partial \mathcal{L}}{\partial \dot q_i} = Q_i
-    \] \[
-    L = T - V
-    \]
-    \[
-    L = \Bigg[ \frac{1}{2} (M + m) \dot X^2 + \frac{1}{2} m L^2 \dot \theta^2 - m L \dot \theta \dot X cos(\theta) \Bigg] - \Bigg[ m g L cos(\theta) \Bigg]
-    \]
-
-    <h2>EQUAÇÕES DE MOVIMENTO</h2>
-    <h3>Na dimensão X</h3>
-    <p>Resolvendo o Lagrangiano em \( \dot X \) nos dará a equação de movimento nessa direção:</p>
-    \[
-    (M + m) \dot X - (mL\ddot \theta cos(\theta) - mL\dot \theta^2 sin(\theta)) = F(t)
-    \]
-    Fazendo a multiplicação do sinal com o parênteses para simplificação:
-    \[
-    (M + m) \dot X - mL\ddot \theta cos(\theta) + mL\dot \theta^2 sin(\theta) = F(t)
-    \]
-
-    <h3>Na dimensão θ</h3>
-    <p>Resolvendo o Lagrangiano em \( \dot \theta \) nos dará a equação de movimento nessa direção:</p>
-    \[
-    m L^2 \ddot \theta^2 - m L \ddot X cos(\theta) + m L \dot X \dot \theta sin(\theta) - m L \dot X \dot \theta sin(\theta) - m g L sin(\theta) = 0
-    \]
-
-    <p>
-        A equação acima é igual a 0 pois não há nenhuma força de Momento externa no nosso exemplo, caso houvesse, iríamos igualar à ela.<br />
-        Cancelando as partes \(+ m L \dot X \dot \theta sin(\theta)\) e \(- m L \dot X \dot \theta sin(\theta)\) temos:
-    </p>
-
-    \[
-    m L^2 \ddot \theta^2 - m L \ddot X cos(\theta) - m g L sin(\theta) = 0
-    \]
-
-    <p>Dividindo tudo por \(mL\):</p>
-    \[
-    L \ddot \theta^2 - \ddot X cos(\theta) - g sin(\theta) = 0
-    \]
-
-
-    <p>Temos então, como resultado final, as equações (n) e (m):</p>
-    \[
-    \begin{cases}
-    (M + m) \dot X - mL\ddot \theta cos(\theta) + mL\dot \theta^2 sin(\theta) = F(t) \\
-    L \ddot \theta^2 - \ddot X cos(\theta) - g sin(\theta) = 0
-    \end{cases}
-    \]
+</body>
+</html>
