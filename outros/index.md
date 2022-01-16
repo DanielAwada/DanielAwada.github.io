@@ -1,6 +1,5 @@
 ---
 layout: default
-permalink: "/outros/"
 title: Mais Conteúdos
 ---
 
