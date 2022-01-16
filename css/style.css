@@ -1,5 +1,4 @@
 :root {
-    /*canva.com/colors/color-meanings/lime-green/*/
     --verde1: #8dbb90;
     --verde2: #74b07a;
     --cinza1: #e2e3df;
@@ -36,11 +35,11 @@ h1, h2, strong {
     color: #222;
 }
 
-a{
+a {
     color: var(--verde2);
 }
 
-nav > ul > a{
+nav > ul > a {
     color: white;
     text-decoration: none;
 }
@@ -65,20 +64,23 @@ header {
     font-weight: 100;
     text-align: center;
     width: 100%;
-
 }
 
-.social{
+.social {
     position: relative;
     bottom: 0;
     display: flex;
     flex-direction: row;
 }
 
-.icon{
+.icon {
     margin: 0.5em;
 }
 
+    .icon:hover {
+        background: white;
+        color: var(--verde1);
+    }
 
 aside {
     background: var(--cinza2);
@@ -91,9 +93,9 @@ aside {
 }
 
     .nav-item:hover {
-            background: white;
-            color: var(--cinza2);
-        }
+        background: white;
+        color: var(--cinza2);
+    }
 
 
 main {
@@ -108,12 +110,11 @@ article {
     padding: 0 2em 2em 2em;
 }
 
-.card {
+.cards {
     background: white;
     border: 4px solid var(--verde2);
     display: grid;
     grid-gap: 1em;
-    height: 200px;
     margin-bottom: 0 auto;
     max-width: 100%;
 }
@@ -129,9 +130,15 @@ footer {
 }
 
 
-@media only screen and (min-width: 801px) {
-    /* For mobile phones: */
+@media only screen and (min-width: 576px) {
 
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
 
     aside {
         position: fixed;
@@ -141,7 +148,7 @@ footer {
         width: 200px;
     }
 
-    .nav-item{
+    .nav-item {
         text-align: left;
     }
 
@@ -151,14 +158,7 @@ footer {
         margin-left: 200px;
     }
 
-    .card {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-}
-
-@media only screen and (min-width: 600px) {
     .cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
