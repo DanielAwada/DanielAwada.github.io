@@ -1,5 +1,5 @@
 # DanielAwada.github.io
 
-https://danielawada.github.io/outros/
+https://danielawada.github.io/
 
 _Em construção_
