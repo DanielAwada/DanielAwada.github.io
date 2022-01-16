@@ -18,14 +18,14 @@ title: Pêndulo Inverso
 |\\(\theta\\)| Ângulo do pêndulo| rad |
 |\\(\dot \theta\\)| Velocidade angular do pêndulo| rad/s |
 
-```math
-\[
+
+\\[
 \begin{cases}
-X_m = X - L sin(\theta)\\
-Y_m =     L cos(\theta)\\
+X_m = X - L sin(\theta) \\\ 
+Y_m =     L cos(\theta) 
 \end{cases}
-\]
-```
+\\]
+
 
 
 Calculando a derivada em função do tempo:
