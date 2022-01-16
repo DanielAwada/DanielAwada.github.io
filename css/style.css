@@ -47,6 +47,7 @@ nav > ul > a {
 mjx-container {
     margin: 1em 0 2em 0 !important;
     color: #222 !important;
+    overflow-x: scroll;
 }
 
 header {

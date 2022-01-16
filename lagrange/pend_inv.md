@@ -18,14 +18,12 @@ title: Pêndulo Inverso
 |\\(\theta\\)| Ângulo do pêndulo| rad |
 |\\(\dot \theta\\)| Velocidade angular do pêndulo| rad/s |
 
-```
-\[
+\\[
 \begin{cases}
-X_m = X - L sin(\theta) \\ 
+X_m = X - L sin(\theta) \\\ 
 Y_m =     L cos(\theta) 
 \end{cases}
-\]
-```
+\\]
 
 Calculando a derivada em função do tempo:
 
@@ -49,19 +47,19 @@ V = m g L cos(\theta)
 
 ### Energia Cinética (T):
 \\[
-T = \frac{1}{2} M \dot X^(2) + \frac{1}{2} m (\dot X_m^(2) + \dot Y_m^(2))
+T = \frac{1}{2} M \dot X^2 + \frac{1}{2} m (\dot X_m^2 + \dot Y_m^2)
 \\]
 
 Substituindo o sistema de equações (2) na equação acima, temos que:
 
 \\[
-T = \frac{1}{2} M \dot X^(2) + \frac{1}{2} m \Big( \dot X^(2) - 2 L \dot \theta \dot X cos(\theta) + L^(2) \dot \theta^(2) \big(cos(\theta)^(2) + sin(\theta)^2 \big) \Big) 
+T = \frac{1}{2} M \dot X^2 + \frac{1}{2} m \Big( \dot X^2 - 2 L \dot \theta \dot X cos(\theta) + L^2 \dot \theta^2 \big(cos(\theta)^2 + sin(\theta)^2 \big) \Big) 
 \\]
 
 Lembrando que \\( cos(\theta)^2 + sin(\theta)^2  = 1\\), a equação acima pode ser simplificada como:
 
 \\[
-T = \frac{1}{2} (M + m) \dot X^(2) + \frac{1}{2} m L^(2) \dot \theta^2 - m L \dot \theta \dot X cos(\theta)
+T = \frac{1}{2} (M + m) \dot X^2 + \frac{1}{2} m L^2 \dot \theta^2 - m L \dot \theta \dot X cos(\theta)
 \\]
 
 
@@ -75,7 +73,7 @@ L = T - V
 \\]
 
 \\[
-L = \Bigg[ \frac{1}{2} (M + m) \dot X^(2) + \frac{1}{2} m L^(2) \dot \theta^2 - m L \dot \theta \dot X cos(\theta) \Bigg] - \Bigg[ m g L cos(\theta) \Bigg]
+L = \Bigg[ \frac{1}{2} (M + m) \dot X^2 + \frac{1}{2} m L^2 \dot \theta^2 - m L \dot \theta \dot X cos(\theta) \Bigg] - \Bigg[ m g L cos(\theta) \Bigg]
 \\]
 
 ## EQUAÇÕES DE MOVIMENTO
@@ -96,7 +94,7 @@ Fazendo a multiplicação do sinal com o parênteses para simplificação:
 Resolvendo o Lagrangiano em \( \dot \theta \) nos dará a equação de movimento nessa direção:
 
 \\[
-m L^(2) \ddot \theta^(2) - m L \ddot X cos(\theta) + m L \dot X \dot \theta sin(\theta) - m L \dot X \dot \theta sin(\theta) - m g L sin(\theta) = 0
+m L^2 \ddot \theta^2 - m L \ddot X cos(\theta) + m L \dot X \dot \theta sin(\theta) - m L \dot X \dot \theta sin(\theta) - m g L sin(\theta) = 0
 \\]
 
 A equação acima é igual a 0 pois não há nenhuma força de Momento externa no nosso exemplo, caso houvesse, iríamos igualar à ela.
@@ -104,7 +102,7 @@ A equação acima é igual a 0 pois não há nenhuma força de Momento externa n
 Cancelando as partes \\(+ m L \dot X \dot \theta sin(\theta)\\) e \\(- m L \dot X \dot \theta sin(\theta)\\) temos:
 
 \\[
-m L^(2) \ddot \theta^2 - m L \ddot X cos(\theta) - m g L sin(\theta) = 0
+m L^2 \ddot \theta^2 - m L \ddot X cos(\theta) - m g L sin(\theta) = 0
 \\]
 
 Dividindo tudo por \\(mL\\):
@@ -116,7 +114,7 @@ Temos então, como resultado final, as equações (n) e (m):
 
 \\[
 \begin{cases}
-(M + m) \dot X - mL\ddot \theta cos(\theta) + mL\dot \theta^(2) sin(\theta) = F(t) \\\ 
+(M + m) \dot X - mL\ddot \theta cos(\theta) + mL\dot \theta^2 sin(\theta) = F(t) \\\ 
 L \ddot \theta^2 - \ddot X cos(\theta) - g sin(\theta) = 0
 \end{cases}
 \\]
