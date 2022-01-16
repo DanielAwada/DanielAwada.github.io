@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /permalink/
 title: Mecânica Lagrangiana
 ---
 
