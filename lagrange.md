@@ -1,9 +1,9 @@
 ---
 layout: default
 permalink: /lagrange/
-title: Mecânica Lagrangiana
+title: MecÃ¢nica Lagrangiana
 ---
 
-# Mecânica Lagrangiana
+# MecÃ¢nica Lagrangiana
 
-- [Pêndulo Inverso](pend_inv)
+- [PÃªndulo Inverso](pend_inv)

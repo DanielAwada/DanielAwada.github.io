@@ -1,3 +1,6 @@
 _site/
 .vs/
 __temp
+.jekyll-cache
+gemfile
+gemfile.lock
