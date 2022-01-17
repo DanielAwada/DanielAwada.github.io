@@ -1,4 +1,5 @@
 ﻿---
+categories: lagrange
 layout: default
 permalink: /lagrange/pend_inv/
 tags: [2GDL, Conservativo]
@@ -91,7 +92,7 @@ Fazendo a multiplicação do sinal com o parênteses para simplificação:
 \\]
 
 ### Na dimensão θ
-Resolvendo o Lagrangiano em \( \dot \theta \) nos dará a equação de movimento nessa direção:
+Resolvendo o Lagrangiano em \\( \dot \theta \\) nos dará a equação de movimento nessa direção:
 
 \\[
 m L^2 \ddot \theta^2 - m L \ddot X cos(\theta) + m L \dot X \dot \theta sin(\theta) - m L \dot X \dot \theta sin(\theta) - m g L sin(\theta) = 0
@@ -106,9 +107,10 @@ m L^2 \ddot \theta^2 - m L \ddot X cos(\theta) - m g L sin(\theta) = 0
 \\]
 
 Dividindo tudo por \\(mL\\):
-\[
+
+\\[
 L \ddot \theta^2 - \ddot X cos(\theta) - g sin(\theta) = 0
-\]
+\\]
 
 Temos então, como resultado final, as equações (n) e (m):
 

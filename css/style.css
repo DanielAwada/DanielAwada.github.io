@@ -44,10 +44,33 @@ nav > ul > a {
     text-decoration: none;
 }
 
+th{
+    text-align: center;
+}
+
+th, td{
+    padding: 0 0.5em;
+}
+
+th, td, table {
+    border: 1px solid #222;
+}
+
 mjx-container {
-    margin: 1em 0 2em 0 !important;
     color: #222 !important;
-    overflow-x: scroll;
+    margin: 0 0 1em 0 !important;
+    overflow-x: auto;
+    padding: 1em 0 1em 0 !important;
+    background-image:
+    /* Shadows */
+    linear-gradient(to right, white, white), linear-gradient(to right, white, white),
+    /* Shadow covers */
+    linear-gradient(to right, rgba(0,0,0,.4), rgba(255,255,255,0)), linear-gradient(to left, rgba(0,0,0,.4), rgba(255,255,255,0));
+    background-position: left center, right center, left center, right center;
+    background-repeat: no-repeat;
+    background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+    /* Opera doesn't support this in the shorthand */
+    background-attachment: local, local, scroll, scroll;
 }
 
 header {
