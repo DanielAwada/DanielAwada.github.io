@@ -1,9 +1,0 @@
-layout: menu
-permalink: /lagrange/
-short: lagrange
-title: Mecânica Lagrangiana
-categorias:
-    - title: 2GDL
-      posts:
-       - title: Pêndulo Inverso
-         url: pend_inv.md
