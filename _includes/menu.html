@@ -2,11 +2,11 @@
 <hr>
 
 {% for categ in site.data.menus[page.ID].categorias %}
-<h3>{{ categ.title }}</h3>
+<h2>{{ categ.title }}</h2>
 <div class="cards">
 
     {% for post in categ.posts %}
-    <div class="card"><a href="{{ post.url }}">{{ post.title }}</a></div>
+    <a href="{{ post.url }}"><div class="card">{{ post.title }}</div></a>
     {% endfor %}
 
 </div>
