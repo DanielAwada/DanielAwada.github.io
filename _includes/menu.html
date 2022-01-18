@@ -1,18 +1,7 @@
----
-layout: default
-
-Mecânica Lagrangiana:
-    categorias:
-        - title: 2GDL
-          posts:
-           - title: Pêndulo Inverso
-             url: pend_inv
----
-
 <h1>{{ include.title }}</h1>
 <hr>
 
-{% for categ in {{ include.title }}.categorias %}
+{% for categ in {{ include.menu }} %}
 <h3>{{ include.title }}</h3>
 <div class="cards">
 
