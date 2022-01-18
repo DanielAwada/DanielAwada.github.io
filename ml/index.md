@@ -1,9 +1,8 @@
 ---
+ID: ml
 layout: default
 permalink: /ml/
 title: Machine Learning
 ---
 
-# Machine Learning
-
-_Ainda não há nada por aqui_
+{% include menu.html title="Machine Learning" %}

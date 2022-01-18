@@ -1,0 +1,18 @@
+alg_lin:
+
+ml:
+
+lagrange:
+    categorias:
+        - title: 2 G.D.L.
+          posts:
+           - title: Pêndulo Inverso
+             url: pend_inv
+
+controle:
+
+python:
+
+arduinos:
+
+outros:

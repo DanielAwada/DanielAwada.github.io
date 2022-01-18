@@ -1,9 +1,8 @@
 ---
+ID: arduinos
 layout: default
 permalink: /arduinos/
 title: Projetos em Arduínos
 ---
 
-# Projetos em Arduínos
-
-_Ainda não há nada por aqui_
+{% include menu.html title="Projetos em Arduínos" %}
