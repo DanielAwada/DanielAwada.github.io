@@ -20,6 +20,24 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+}
+
+.language-python {
+    background: #eee;
+    background-image: linear-gradient(to right, #eee, #eee), linear-gradient(to right, #eee, #eee), linear-gradient(to right, rgba(0,0,0,.4), rgba(255,255,255,0)), linear-gradient(to left, rgba(0,0,0,.4), rgba(255,255,255,0));
+    background-position: left center, right center, left center, right center;
+    background-repeat: no-repeat;
+    background-size: 4% 100%, 4% 100%, 2% 100%, 2% 100%;
+    background-attachment: local, local, scroll, scroll;
+    padding: 1em;
+    margin-bottom: 1em;
+    overflow-x: auto;
+}
 
 h1 {
     font-family: 'Times New Roman', serif;
@@ -43,6 +61,10 @@ hr {
     margin: 1em;
 }
 
+ul{
+    margin-bottom: 1em;
+}
+
 nav > ul > a {
     color: white;
     text-decoration: none;
@@ -58,6 +80,10 @@ th, td{
 
 th, td, table {
     border: 1px solid var(--texto1);
+}
+
+table{
+    margin-bottom: 1em;
 }
 
 mjx-container {
@@ -80,15 +106,15 @@ mjx-container {
         }
 
 
-        header {
-            align-items: center;
-            background: var(--verde1);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            height: 200px;
-            justify-content: center;
-            width: 100%;
+header {
+    align-items: center;
+    background: var(--verde1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+    width: 100%;
         }
 
 .logo {

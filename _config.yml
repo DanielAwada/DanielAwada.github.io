@@ -1,4 +1,7 @@
 ---
 layout: default
 title: Daniel Awada
+markdown: kramdown
+highlighter: rouge
+input: GFM
 ---

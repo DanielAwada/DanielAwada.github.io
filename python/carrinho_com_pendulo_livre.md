@@ -30,8 +30,8 @@ As variáveis de parametros do sistema são:
 |\\(m_1\\)| Massa do carrinho | kg |
 |\\(m_2\\)| Massa do pêndulo | kg |
 |\\(l_1\\)| Posição de equilíbrio da mola| m |
-|\\(l_2_\\)| Comprimento do pêndulo| m |
-|\\(k_1_\\)| Constante elástica da mola | N/m |
+|\\(l_2\\)| Comprimento do pêndulo| m |
+|\\(k_1\\)| Constante elástica da mola | N/m |
 
 As funções do sistema que são em relação ao tempo são:
 
@@ -39,10 +39,10 @@ As funções do sistema que são em relação ao tempo são:
 | --- | --- | --- |
 | \\(x_1(t)\\) | Posição horizontal do carrinho | m |
 | \\(x_2(t)\\) | Posição horizontal do pêndulo | m |
-| \\(y_2_(t)\\) | Posição vertical do pêndulo| m |
-| \\(\theta_2_(t)\\) | Ângulo do pêndulo com a horizontal| m |
+| \\(y_2(t)\\) | Posição vertical do pêndulo| m |
+| \\(\theta_2(t)\\) | Ângulo do pêndulo com a horizontal| m |
 
-Apenas as funções \\(x_1(t)\\) e \\(\theta_2_(t)\\) são suficiente para definir qualquer estado do sistema. Mas calcular as variáveis \\(x_2(t)\\) e \\(y_2(t)\\) vão ser úteis lá na frente na hora de fazer as animações.
+Apenas as funções \\(x_1(t)\\) e \\(\theta_2(t)\\) são suficiente para definir qualquer estado do sistema. Mas calcular as variáveis \\(x_2(t)\\) e \\(y_2(t)\\) vão ser úteis lá na frente na hora de fazer as animações.
 
 A posição vertical do carrinho (\\(y_1(t)\\)) é sempre igual a \\(0\\).
 
@@ -100,7 +100,7 @@ Equação de lagrange é dada por:
 \frac{\mathrm{d}}{\mathrm{d}t} \Bigg(\frac{\partial \mathcal{L}}{\partial \dot q_i} \Bigg) - \frac{\partial \mathcal{L}}{\partial \dot q_i} = 0
 \\]
 
-Onde q_i é cada uma das variáveis do sistema, ou seja, \\(x_1(t)\\) e \\(\theta_2_(t)\\).
+Onde q_i é cada uma das variáveis do sistema, ou seja, \\(x_1(t)\\) e \\(\theta_2(t)\\).
 
 Calculando para cada uma das variáveis:
 
@@ -109,7 +109,7 @@ EL1 = diff(L, x1) - diff(diff(L, x1_d), t)
 EL2 = diff(L, the2) - diff(diff(L, the2_d), t)
 ```
 
-Agora queremos saber a solução da equação acima para \\(\ddot x_1(t)\\) e \\(\ddot \theta_2_(t)\\). No algorítimo isso se traduz como:
+Agora queremos saber a solução da equação acima para \\(\ddot x_1(t)\\) e \\(\ddot \theta_2(t)\\). No algorítimo isso se traduz como:
  
 ```python
 sols = solve([EL1, EL2], (x1_dd, the2_dd))
@@ -172,7 +172,7 @@ inic = (1, np.pi/2, 0, -0.01) #x1, the2, x1_d, the2_d
 out = odeint(dSdt, inic, tt, args = params)
 ```
 
-Dado todas as informações necessárias par ao sistema, podemos começar gerando um gráfico com os valores de \\(\ddot x_1(t)\\) e \\(\ddot \theta_2_(t)\\) em funçao do tempo:
+Dado todas as informações necessárias par ao sistema, podemos começar gerando um gráfico com os valores de \\(\ddot x_1(t)\\) e \\(\ddot \theta_2(t)\\) em funçao do tempo:
 
 ```python
 plt.plot(out.T[0])
@@ -183,8 +183,8 @@ Resultado:
 
 ![Gráfico posição versus Tempo](https://i.imgur.com/T2tfhmA.png)
 
-- Linha azul: \\(\ddot x_1(t)\\)
-- Linha laranja: \\(\ddot \theta_2_(t)\\)
+- Linha azul: \\(\ x_1(t) \\)
+- Linha laranja: \\( \theta_2(t) \\)
 
 Também podemos fazer uma animação para ver o comportamento desse sistema em tempo real:
 
@@ -208,4 +208,5 @@ ani.save("carr_pend_.gif', writer='pillow',fps=20)
 ```
 
 Resultado final:
-![Animação Carrinho com Pêndulo Livre](https://i.imgur.com/N1IPjkk.png)
+
+![Animação Carrinho com Pêndulo Livre](https://i.imgur.com/pJp5hFN.gif)
