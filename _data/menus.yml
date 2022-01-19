@@ -4,14 +4,19 @@ ml:
 
 lagrange:
     categorias:
-        - title: 2 G.D.L.
+        - title: 2 G.D.L. Conservativos
           posts:
-           - title: Pêndulo Inverso
-             url: pend_inv
+             - title: Pêndulo Inverso
+               url: pendulo_inverso
 
 controle:
 
 python:
+    categorias:
+        - title: Sistemas Livres
+          posts:
+            - title: Carrinho com Pêndulo Livre
+              url: carrinho_com_pendulo_livre
 
 arduinos:
 

@@ -1,7 +1,7 @@
 ﻿---
 categories: lagrange
 layout: default
-permalink: /lagrange/pend_inv/
+permalink: /lagrange/pendulo_inverso/
 tags: [2GDL, Conservativo]
 title: Pêndulo Inverso
 ---   

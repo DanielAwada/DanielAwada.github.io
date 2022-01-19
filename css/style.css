@@ -62,32 +62,34 @@ th, td, table {
 
 mjx-container {
     color: var(--texto1) !important;
-    margin: 0 0 1em 0 !important;
-    overflow-x: auto;
-    padding: 1em 0 1em 0 !important;
-    background-image:
-    linear-gradient(to right, white, white), linear-gradient(to right, white, white),
-    linear-gradient(to right, rgba(0,0,0,.4), rgba(255,255,255,0)), linear-gradient(to left, rgba(0,0,0,.4), rgba(255,255,255,0));
-    background-position: left center, right center, left center, right center;
-    background-repeat: no-repeat;
-    background-size: 4% 100%, 4% 100%, 2% 100%, 2% 100%;
-    background-attachment: local, local, scroll, scroll;
 }
 
-td > mjx-container {
-    padding: 0 !important;
-}
+    mjx-container[jax="CHTML"][display="true"] {
+        background-image: linear-gradient(to right, white, white), linear-gradient(to right, white, white), linear-gradient(to right, rgba(0,0,0,.4), rgba(255,255,255,0)), linear-gradient(to left, rgba(0,0,0,.4), rgba(255,255,255,0));
+        background-position: left center, right center, left center, right center;
+        background-repeat: no-repeat;
+        background-size: 4% 100%, 4% 100%, 2% 100%, 2% 100%;
+        background-attachment: local, local, scroll, scroll;
+        margin: 0 0 1em 0 !important;
+        overflow-x: auto;
+        padding: 0.5em !important;
+    }
 
-header {
-    align-items: center;
-    background: var(--verde1);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    justify-content: center;
-    width: 100%;
-}
+        mjx-container[jax="CHTML"][display="true"]:hover {
+            border: 1px inset;
+        }
+
+
+        header {
+            align-items: center;
+            background: var(--verde1);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            justify-content: center;
+            width: 100%;
+        }
 
 .logo {
     font-weight: 100;

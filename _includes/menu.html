@@ -1,16 +1,16 @@
-<h1>{{ include.title }}</h1>
-<hr>
+    <h1>{{ include.title }}</h1>
+    <hr>
 
-{% for categ in site.data.menus[page.ID].categorias %}
-<h2>{{ categ.title }}</h2>
-<div class="cards">
+    {% for categ in site.data.menus[page.ID].categorias %}
+    <h2>{{ categ.title }}</h2>
+    <div class="cards">
 
-    {% for post in categ.posts %}
-    <a href="{{ post.url }}"><div class="card">{{ post.title }}</div></a>
+        {% for post in categ.posts %}
+        <a href="{{ post.url }}"><div class="card">{{ post.title }}</div></a>
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+    <p><i>Ainda não há nada por aqui</i></p>
     {% endfor %}
-
-</div>
-
-{% else %}
-<p><i>Ainda não há nada por aqui</i></p>
-{% endfor %}
